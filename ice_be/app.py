@@ -10,7 +10,12 @@ CORS(
     app,
     resources={
         r"/verify-image": {
-            "origins": ["https://ice-watch-adminpanel.vercel.app"]
+            "origins": [
+                "https://ice-watch-adminpanel.vercel.app",
+                "http://192.168.100.212:5173"
+            ],
+            "methods": ["POST", "OPTIONS"],
+            "allow_headers": ["Content-Type", "Authorization"]
         }
     }
 )
