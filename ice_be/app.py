@@ -4,7 +4,16 @@ import piexif
 import math
 
 app = Flask(__name__)
-CORS(app)  # allow all origins (LAN + dev safe)
+from flask_cors import CORS
+
+CORS(
+    app,
+    resources={
+        r"/verify-image": {
+            "origins": ["https://ice-watch-adminpanel.vercel.app"]
+        }
+    }
+)
 
 # ===============================
 # COUNTRY BOUNDARIES (Bounding Box)
