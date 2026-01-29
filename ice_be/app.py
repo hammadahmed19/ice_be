@@ -12,7 +12,8 @@ CORS(
         r"/verify-image": {
             "origins": [
                 "https://ice-watch-adminpanel.vercel.app",
-                "http://192.168.100.212:5173"
+                "http://192.168.100.212:5173",
+                "http://localhost:5173",
             ],
             "methods": ["POST", "OPTIONS"],
             "allow_headers": ["Content-Type", "Authorization"]
